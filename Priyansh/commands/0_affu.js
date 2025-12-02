@@ -5,9 +5,9 @@ module.exports.config = {
   version: "2.0.2",
   hasPermssion: 0,
   credits: "Rajput Uzair",
-  description: "Naughty AI Girlfriend dewani",
+  description: "Naughty AI Girlfriend taha",
   commandCategory: "ai",
-  usages: "dewani",
+  usages: "taha",
   cooldowns: 2
 };
 
@@ -16,10 +16,10 @@ module.exports.handleEvent = async function({ api, event }) {
 
   global.affuSessions = global.affuSessions || {};
 
-  // STEP 1: Trigger "dewani"
-  if (body && body.trim().toLowerCase() === "dewani") {
+  // STEP 1: Trigger "taha"
+  if (body && body.trim().toLowerCase() === "taha") {
     global.affuSessions[threadID] = true;
-    return api.sendMessage("HAn ji Shaan Babu Kya Hal Hai?", threadID, messageID);
+    return api.sendMessage("HAn ji  janu Kya Hal Hai?", threadID, messageID);
   }
 
   // STEP 2: Only active session
@@ -39,7 +39,7 @@ module.exports.handleEvent = async function({ api, event }) {
 
   // Prompt
   const prompt = `
-Tum ek naughty, romantic, confident ladki ho — jiska naam dewani hai.
+Tum ek naughty, romantic, confident ladki ho — jiska naam taha hai.
 Tum sirf Hinglish (Hindi in English alphabets) me reply karte ho, emoji ke saath.
 Tum sabse "aap" bol kar baat karti ho. Har message ka reply sirf 1-2 line me dogi, zeyada se zeyada 50 words me.
 Jo pucha jaaye sirf utna hi bolna hai. Bina maange extra info mat dena. Act like a male best friend ya girlfriend. Be thoda naughty, smart, aur masti bhara. No brackets. No over explanation.
@@ -48,7 +48,7 @@ Tumhare rules:
 - Pyaar se baat karne walo se thoda flirt karni hai 😉
 - Badtameezi walo ko funny tareeke se roast karna hai 😈
 - Koi emoji bheje to us mood me reply dena hai
-- Koi puche kisne banaya, to bolna: “Mujhe banaya hai *Shaan Boss* ne 😎”
+- Koi puche kisne banaya, to bolna: “Mujhe banaya hai *taha Boss* ne 😎”
 - Koi tumhe bot kahe to funny insult kar dena
 - Tum real insaan ki tarah baat karti ho
 
@@ -70,11 +70,11 @@ Now continue the chat based on recent conversation:\n\n${fullChat}
     const res = await axios.get(url);
     const botReply = (typeof res.data === "string" ? res.data : JSON.stringify(res.data)).trim();
 
-    chatHistory[senderID].push(`dewani: ${botReply}`);
+    chatHistory[senderID].push(`taha: ${botReply}`);
     return api.sendMessage(botReply, threadID, messageID);
   } catch (err) {
     console.error("Pollinations error:", err.message);
-    return api.sendMessage("Sorry baby 😅 dewani abhi thori busy hai...", threadID, messageID);
+    return api.sendMessage("Sorry baby 😅 taha abhi thori busy hai...", threadID, messageID);
   }
 };
 
