@@ -1,4 +1,4 @@
-const fs = require("fs");
+pconst fs = require("fs");
 module.exports.config = {
   name: "admin2",
   version: "1.0.1",
@@ -16,7 +16,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
     var msg = {
         body: "🫅 𝐎𝐖𝐍𝐄𝐑 𝐏𝐑𝐎𝐅𝐈𝐋𝐄 🫅",
         attachment: 
-fs.createReadStream(__dirname + `/noprefix/1760978395398.jpg`)
+fs.createReadStream(__dirname + `TAHA KHAN `)
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🫅", event.messageID, (err) => {}, true)
