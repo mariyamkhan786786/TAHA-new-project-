@@ -219,10 +219,6 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("Lob You too", threadID);
    };
 
-    if ((event.body.toLowerCase() == "good night") || (event.body.toLowerCase() == "good nite")) {
-     return api.sendMessage("good night too", threadID);
-   };
-
    if ((event.body.toLowerCase() == "does the bot love me") || (event.body.toLowerCase() == "good night meri jan")) {
      return api.sendMessage("Yes <3", threadID);
    };
